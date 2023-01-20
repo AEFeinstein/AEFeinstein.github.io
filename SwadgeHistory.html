@@ -3,7 +3,7 @@
 	<head>
 		<title>Swadge History</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="w3.css">
 		<style>
 			#container {
 				height: 100%;
@@ -76,7 +76,7 @@
 				margin-left: -36px;
 				margin-top: -36px;
 				position: absolute;
-				background: url('https://i.imgur.com/TxzC70f.png') no-repeat;
+				background: url('swadge_imgs/play_btn.png') no-repeat;
 				cursor: pointer;
 			}
 		</style>
@@ -84,7 +84,16 @@
 		<template id="main_template">
 			<div id="ANCHOR">
 				<h2 class="item_title">TEXT</h2>
+				<div class="imgs_container">TEXT</div>
+				<h3 class="item_subtitle">Credits</h3>
+				<div class="item_credits">TEXT</div>
+				<h3 class="item_subtitle">Description</h3>
 				<div class="item_desc">TEXT</div>
+				<div class="modes_container">
+					<h3 class="item_subtitle">Modes</h3>
+					<div class="item_modes">TEXT</div>
+				</div>
+				<h3 class="item_subtitle">Links</h3>
 				<div id="container" class="gh_link_container">
 					<div id="left">
 						<img src="swadge_imgs/GitHub-Mark-64px.png" width="64" height="64">
@@ -103,7 +112,7 @@
 					</div>
 					<div id="right" class="item_swadge_manuals">TEXT</div>
 				</div>
-				<div class="imgs_container">TEXT</div>
+				<h3 class="item_subtitle">Videos</h3>
 				<div class="yt_link_container">TEXT</div>
 				<hr>
 			</div>
@@ -119,7 +128,9 @@
 				{
 					year: 2013,
 					name: "Water Chip",
-					desc: "TODO Description",
+					credits: "Charles Lohr, Nick Marinelli",
+					desc: "We realized we could make just bare PCBs for an affordable price. This swadge was just a raw PCB, but with a functional circuit. It had an ATTiny44 hooked up to a USB, which could be flashed with TinyISP firmware. Then, it could be a USB connected AVR programmer for an ATTiny85. This ATTiny85 could use two pads on the front to be a touch sensor, or transmit audio in the FM spectrum. Really, only about 15 people took me up on the offer to help them make their badge into a functional one, and I had kits I distributed after event. Eventually I sold out of all 30 kits.<br><br>We used a “US” boardhouse, they told us we could do full panels and a unique silkscreen per panel. So, whambam we did. Turns out we couldn’t. After some heated discussion we made the “US” boardhouse eat the added cost, and then we found out it was just a front for a Chinese boardhouse. And we finally were able to contact the factory in China and made sure everything was OK.",
+					modes: [],
 					yt_links: ["LT3mv_EQp5Q", "5rhXUWMOKPk", "GdECYJA4iF0"],
 					gh_links: [{url: "https://github.com/cnlohr/magfestbadges", text: "Github Repo"}],
 					sw_links: [],
@@ -129,7 +140,9 @@
 				{
 					year: 2017,
 					name: "Castlevania (Super)",
-					desc: "TODO Description",
+					credits: "Mark Murnane, Charles Lohr, Dylan Whichard, Jason Spriggs",
+					desc: "Conceived at MAGLabs earlier in the year, with the ESP8266 becoming a mainstay in the hobbyist market, it was time for us to act. Charles had done some small orders with Elecrow, and the theme was Castlevania, so we ordered some prototypes from PCBWay, and quickly put together something with some buttons, LEDs and 2 AA batteries. We wrote firmware that had some basic modes, like flashlight mode, WIFI RX sensitivity mode. AP mode where it would make a wifi network. But, primarily, if it was turned on, it would look for a wifi network for MAGFest Swadges. It would connect using a key that was in the firmware (which was actually hacked at the event). Once connected, it would communicate with a server that Dylan ran, where keypresses would be reported and the server ran various virtual games, and report the colors back to the other swadges. It would allow people to go into a color mode where buttons pressed would be queued up on everyone’s swadge across the gaylord. For concerts, there were 3 castlevania swadges that tapped into the lighting deck which broadcast out the lighting channels and allowed Ian Millholland to control the colors of everyone’s swadges.<br><br>Your thumb would rest immediately next to where the battery connector poked through. And it was really sharp, and I think some people ended up cutting their fingers open on them.",
+					modes: [],
 					yt_links: ["8WCIu-3OFEQ", "DbjlStyMmaY"],
 					gh_links: [{url: "https://github.com/magfest/MAGFest-2017-Swadges", text: "Github Repo (Hardware)"},
 							   {url: "https://github.com/cnlohr/swadges2017", text: "Github Repo (Firmware)"}],
@@ -140,7 +153,9 @@
 				{
 					year: 2017,
 					name: "Sonic (West)",
-					desc: "TODO Description",
+					credits: "Charles Lohr, Mark Murnane, Dylan Whichard, Jason Spriggs, Shir Goldberg, David Goldberg (Supersoaker)",
+					desc: "We didn’t have enough time to get boards made in a factory, so we came up with a simple design, using something vaguely in the shape of something sonic-like. And made it a synthesizer. Mark added some voice samples and we had the firmware for our wonky ATtiny861. There were no fine details, everything was relatively easy to populate, so guess what? We ordered a mountain of PCBs from PCBway. <br><br>I don’t remember what the vocal samples were that were put into the swadge, or what notes it could play. AFAIK, the only good song we found you could effectively play on the swadges were “When the Saints Go Marching In.”<br><br>Why not go ENIG, so they were all gold too. And heck, we specified gold edge plating on the inside of the swadge. And unbelievably they did it. Like actual gold rings on the inside. I think they lost money on this swadge. We all got together and worked for about 20? hours straight and assembled all the swadges in time for them to fly out to West.",
+					modes: [],
 					yt_links: ["l3BDuRtbuNA", "_78K70HH-eQ", "KFAsCKyT0lg"],
 					gh_links: [{url: "https://github.com/magfest/MAGWest-2017-Swadges", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/magwest/"],
@@ -150,7 +165,9 @@
 				{
 					year: 2017,
 					name: "Bioshock (Labs)",
-					desc: "TODO Description",
+					credits: "Mark Murnane, Jason Spriggs, Dylan Whichard",
+					desc: "Back to the ESP8266. And, also, connecting to a main server. These swadges had WS2812 LEDs and an optional \"Badge Enhancement Module\" kit with an OLED display. We never actually got any of that working, or well much of it at all. In fact, when we got to the event, the OLED screens didn’t turn on. We were able to roll out a firmware mid-event that updated the OLED screen and they could put their name on it. ALSO Mark setup a Let’s Play! Pokemon in one of the rooms, so everyone could jam the buttons and it would move the character around on the screen. This was when we decided not to try running a server for everything. This was also the only time that the swadges were also the official badge.<br><br>Valve had sent Charles 7,000 Vive chicklet sensors, so we put a spot on the swadge to install a chicklet, and, lo and behold, we never actually did anything with any. The factory wasn’t even able to solder the vive sensors in, so they shipped them back to us.",
+					modes: [],
 					yt_links: ["E1RngZtJzF4"],
 					gh_links: [{url: "https://github.com/magfest/MAGLabs-2017-Badges", text: "Github Repo (Hardware)"}],
 					sw_links: ["https://swadge.com/maglabs-2017/"],
@@ -160,7 +177,9 @@
 				{
 					year: 2018,
 					name: "King Donut",
-					desc: "TODO Description",
+					credits: "Mark Murnane, Jason Spriggs, Dylan Whichard",
+					desc: "King Donut was another synthesizer swadge, this time with two channels and 13 different sound modes: five octaves of sine wave, three octaves of square waves, two octaves of noise, two drum sets, and one mode that says \"MAG\" and \"Fest\". These swadges were made and programmed in a factory, but they didn't arrive until after MAGFest was over. So, we decided to set up a form and began mailing them out, after updating the swadges to a newer firmware with some more sound modes.<br><br>The swadges can be upgraded with a headphone jack.",
+					modes: [],
 					yt_links: ["SVV12p-pIGk", "y8iGXTb6sWw"],
 					gh_links: [{url: "https://github.com/cnlohr/donut", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/donut/"],
@@ -170,7 +189,9 @@
 				{
 					year: 2018,
 					name: "Wagon (Stock)",
-					desc: "TODO Description",
+					credits: "Charles Lohr",
+					desc: "MAGStock was Oregon Trail themed this year and as such, we made our Oregon Trail swadges. We ended up making around 100, but only distributing them to about 32 people. It had a microphone and ran colorchord. Those 32 people had a blast. The 8 LEDs on it lit up to the music. It supported external LED strips if configured to use the additional LEDs.<br><br>We ordered them with WS2813’s, except the factory thought we meant WS2813S… which is a VERY different LED. At the event I hacked off the LEDs, then used WS2812B strips and soldered and hot glued them to the swadges.",
+					modes: [],
 					yt_links: [],
 					gh_links: [{url: "https://github.com/cnlohr/magstock2018", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/magstock-2018/"],
@@ -180,7 +201,15 @@
 				{
 					year: 2019,
 					name: "Reflector",
-					desc: "TODO Description",
+					credits: "Aaron Angert, Adam Feinstein, Charles Lohr, Dac, Gillian Webb",
+					desc: "The Reflector Swadge was designed with the Suncats theme in mind, and was the first Swadge to incorporate a plastic part: the big hexagonal LED diffuser. Many plastics were tested for optical characteristics and durability before settling on the final one. Gillian spent many makerspace hours cutting them all out, and the unused middle part became highly collectible ‘garbage coins.’ The final assembly for each Swadge, which meant reflashing firmware and double-sided-taping on the diffuser, took a team of about a dozen people two full days to complete.<br><br>The Reflector had a microphone and ran Colorchord like the Wagon Swadge. The Wagon proved it could be done. The Reflector was the first Swadge to have ad-hoc wireless connectivity. Two Swadges could wirelessly pair by both entering pairing mode and being held close to each other. Once paired, users could play the reflex game, also called Reflector, and the more games a user won, the more LED animations would be unlocked.",
+					modes: [
+						"ColorChord - Lights up as a function of what you are singing ",
+						"Reflector - Wireless Multiplayer Game called Reflector",
+						"Light Dance - Cycles through different light patterns. For every Reflector game you win, it unlocks another Light Dance",
+						"D6 Roller - Rolls a six-sided die",
+						"Flashlight - Lights the LEDs up on white, turning your Swadge into a flashlight",
+						"Guitar Tuner - Uses the ColorChord code to listen to sound and helps you tune a guitar. It can tune all six strings at once as it can show whether all 6 strings are flat, sharp or in tune. It also has a regular chromatic tuner mode which can tune any instrument"],
 					yt_links: ["OvCkdXIwe28", "AGZIFDTMiNc", "hfqV1GamDgA", "OynwAmAuaw0", "hjsh4uEY-fk", "TBrHIFqIWhw", "4qPR-8rzkdE", "hq6Oc0iuRV8", "oDES-gMcwGM", "Z6drU6sBMkE"],
 					gh_links: [{url: "https://github.com/cnlohr/swadge2019", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/super2019/"],
@@ -191,6 +220,8 @@
 					year: 2020,
 					name: "Barrel & Banana",
 					desc: "TODO Description",
+					modes: ["TODO modes"],
+					credits: "Aaron Angert, Adam Feinstein, Bill Baritompa, Bryce Browner, Charles Lohr, Dac, Gillian Webb, Jonathan Moriarty, Noelle",
 					yt_links: ["LsFIoCyYO6w", "-P8XpYW7M30"],
 					gh_links: [{url: "https://github.com/AEFeinstein/Super-2020-Swadge-HW", text: "Github Repo (Hardware)"},
 							   {url: "https://github.com/AEFeinstein/Super-2020-Swadge-FW", text: "Github Repo (Firmware)"}],
@@ -201,7 +232,16 @@
 				{
 					year: 2022,
 					name: "Chainsaw",
-					desc: "TODO Description",
+					credits: "Adam Feinstein, Charles Lohr, Dac, Gillian Webb, Jonathan Moriarty, Bryce Browner, Richard Van Tassel, Emma Atlas, Greg Lord, Justin Wood ",
+					desc: "The Chainsaw builds on the Barrel platform by swapping the buzzer back for a microphone, removing the accelerometer, and adding more buttons. The ‘headband’ has been extended so that it both protects the OLED’s glass corners and diffuses the RGB LEDs. An edge-plating technique was used to give the chainsaw teeth a metallic finish.",
+					modes: [
+						"SHREDDER - A first-person guitar game where you use the power of music to take down the evil Hateth Note army",
+						"FLIGHT SIM - A flight simulator where you collect beans and fly through donuts in an arena that looks strangely familiar",
+						"PERSONAL DEMON - A game where you raise and care for your very own Personal Demon",
+						"STOMP - A game where you stomp the incoming skulls. It’s like dancing with your thumbs",
+						"M-TYPE - A classic style shoot-em-up with collectible powerups and a rechargeable shield",
+						"COLORCHORD - A mode where the LEDs react to music",
+						"TUNERNOME - A mode which is both a metronome and an instrument tuner"],
 					yt_links: ["FrPT_xJY5Cg", "T_qtopoaOnc", "riSsZ8UFYVM", "p-Y-TKsqngA", "jN81-Q4-cWM", "ywYTDOBF1Ls"],
 					gh_links: [{url: "https://github.com/AEFeinstein/Super-2022-Swadge-HW", text: "Github Repo (Hardware)"},
 							   {url: "https://github.com/AEFeinstein/Super-2022-Swadge-FW", text: "Github Repo (Firmware)"}],
@@ -212,7 +252,23 @@
 				{
 					year: 2023,
 					name: "Squarewavebird",
+					credits: "Adam Feinstein, Agnew, Allison (AllieCat) Brantley, Bedrock, Bryce Browner, Dac, Dan 'Solo' Austin, Decnav, dylwhich, Ellie (VanillyNeko.com), FuryfulFawful, Greg Lord (@gplord), Grocery Man, Haloflooder, Hunter Dyar, J.Vega (@JVeg199X), Joe Newman, Jonathan Moriarty, Kaitie Lawson, Kevin \"PF3k\" Lin, Laurel Lemon, Max Campbell, MrTroy, Private Island, Thaeli",
 					desc: "TODO Description",
+					modes: [
+						"Swadge Bros - ",
+						"Swadge Land - ",
+						"π-Cross - ",
+						"Donut Jump - ",
+						"Flyin Donut - ",
+						"Tiltrads - ",
+						"Colorchord - ",
+						"TechnoSlideWhistle - ",
+						"Tunernome - ",
+						"Jukebox - ",
+						"MFPaint - ",
+						"Gamepad - ",
+						"Dice Roller - ",
+						"LED Animations - "],
 					yt_links: ["AdtCOf92yiQ", "Zd1CDvDD4Y0", "ZYPWSUe8KeU"],
 					gh_links: [{url: "https://github.com/AEFeinstein/Super-2023-Swadge-HW", text: "Github Repo (Hardware)"},
 							   {url: "https://github.com/AEFeinstein/Super-2023-Swadge-FW", text: "Github Repo (Firmware)"}],
@@ -263,7 +319,22 @@
 
 					// Do text replacement:
 					replaceTextByClass(m_node, ".item_title", data[idx].name);
-					replaceTextByClass(m_node, ".item_desc", data[idx].desc);
+					replaceTextByClass(m_node, ".item_credits", data[idx].credits);
+					replaceHtmlByClass(m_node, ".item_desc", data[idx].desc);
+
+					// Build out modes
+					if(data[idx].modes.length > 0) {
+						var mode_txt = "<ul>";
+						var mdIdx;
+						for(mdIdx = 0; mdIdx < data[idx].modes.length; mdIdx++) {
+							mode_txt += "<li>" + data[idx].modes[mdIdx] + "</li>"
+						}
+						mode_txt += "</ul>"
+						replaceHtmlByClass(m_node, ".item_modes", mode_txt);
+					}
+					else{
+						removeDivByClass(m_node, ".modes_container");
+					}
 
 					// Build out Github links
 					if(data[idx].gh_links.length > 0) {
@@ -400,10 +471,12 @@
 				<h1>Swadge History</h1>
 			</div>
 			<div class="w3-container" id="main_content">
+				<!--
 				<ul>
 					<li><a href="https://photos.google.com/share/AF1QipPLuKIJAFl__YM99s27YNtrL8kk5-zIjjxqxU3z837qvz2xMR4AGMbx1iFKQr_Ivg?key=RXYwS0tzSFE0azRXb0RQRWxRMGhqbEh0eWlMdmNR">Google Photo Album</a></li>
 					<li><a href="https://docs.google.com/document/d/1zuJ04DWmYMRNDTC8mrsMKL4H1TFm8wToW_LboJRVXCU/edit">Google Doc</a></li>
 				</ul>
+				-->
 				<!-- content added via template -->
 			</div>
 		</div>
