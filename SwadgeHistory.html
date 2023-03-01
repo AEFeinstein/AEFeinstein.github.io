@@ -135,7 +135,8 @@
 					gh_links: [{url: "https://github.com/cnlohr/magfestbadges", text: "Github Repo"}],
 					sw_links: [],
 					imgs: [],
-					manuals: []
+					manuals: [],
+					icon: "water-chip-top.svg"
 				},
 				{
 					year: 2017,
@@ -148,7 +149,8 @@
 							   {url: "https://github.com/cnlohr/swadges2017", text: "Github Repo (Firmware)"}],
 					sw_links: [],
 					imgs: [],
-					manuals: []
+					manuals: [],
+					icon: "castlevania-front.svg"
 				},
 				{
 					year: 2017,
@@ -160,7 +162,8 @@
 					gh_links: [{url: "https://github.com/magfest/MAGWest-2017-Swadges", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/magwest/"],
 					imgs: [],
-					manuals: []
+					manuals: [],
+					icon: "sonic-top.svg"
 				},
 				{
 					year: 2017,
@@ -172,7 +175,8 @@
 					gh_links: [{url: "https://github.com/magfest/MAGLabs-2017-Badges", text: "Github Repo (Hardware)"}],
 					sw_links: ["https://swadge.com/maglabs-2017/"],
 					imgs: [],
-					manuals: []
+					manuals: [],
+					icon: "MAGLabs-2017-Swadges-brd-top.svg"
 				},
 				{
 					year: 2018,
@@ -184,7 +188,8 @@
 					gh_links: [{url: "https://github.com/cnlohr/donut", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/donut/"],
 					imgs: [],
-					manuals: []
+					manuals: [],
+					icon: "donut-top.svg"
 				},
 				{
 					year: 2018,
@@ -196,7 +201,8 @@
 					gh_links: [{url: "https://github.com/cnlohr/magstock2018", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/magstock-2018/"],
 					imgs: ["wagon_top.png", "wagon_bottom.png"],
-					manuals: []
+					manuals: [],
+					icon: "magstock2018A-brd-top.svg"
 				},
 				{
 					year: 2019,
@@ -214,7 +220,8 @@
 					gh_links: [{url: "https://github.com/cnlohr/swadge2019", text: "Github Repo"}],
 					sw_links: ["https://swadge.com/super2019/"],
 					imgs: ["reflector.png"],
-					manuals: ["swadge_instructions.jpg", "swadge_attach_instructions-768x994.jpg"]
+					manuals: ["swadge_instructions.jpg", "swadge_attach_instructions-768x994.jpg"],
+					icon: "reflector-brd-front.svg"
 				},
 				{
 					year: 2020,
@@ -227,7 +234,8 @@
 							   {url: "https://github.com/AEFeinstein/Super-2020-Swadge-FW", text: "Github Repo (Firmware)"}],
 					sw_links: ["https://swadge.com/super2020/"],
 					imgs: ["swadge-barrel.png", "swadge-banana.png"],
-					manuals: []
+					manuals: [],
+					icon: "swadge-barrel-brd-top.svg"
 				},
 				{
 					year: 2022,
@@ -247,7 +255,8 @@
 							   {url: "https://github.com/AEFeinstein/Super-2022-Swadge-FW", text: "Github Repo (Firmware)"}],
 					sw_links: ["https://swadge.com/super2022/"],
 					imgs: ["chainsaw.png"],
-					manuals: ["2022_manual.pdf"]
+					manuals: ["2022_manual.pdf"],
+					icon: "Swadge-2021-brd-top.svg"
 				},
 				{
 					year: 2023,
@@ -269,12 +278,13 @@
 						"Gamepad - ",
 						"Dice Roller - ",
 						"LED Animations - "],
-					yt_links: ["AdtCOf92yiQ", "Zd1CDvDD4Y0", "ZYPWSUe8KeU"],
+					yt_links: ["AdtCOf92yiQ", "Zd1CDvDD4Y0", "ZYPWSUe8KeU", "VnZac6lA1_k"],
 					gh_links: [{url: "https://github.com/AEFeinstein/Super-2023-Swadge-HW", text: "Github Repo (Hardware)"},
 							   {url: "https://github.com/AEFeinstein/Super-2023-Swadge-FW", text: "Github Repo (Firmware)"}],
 					sw_links: ["https://swadge.com/super2023/"],
 					imgs: ["squarewavebird.png"],
-					manuals: ["2023_manual.pdf"]
+					manuals: ["2023_manual.pdf"],
+					icon: "squarewavebird-top.svg"
 				}
 			];
 
@@ -412,7 +422,7 @@
 					var s_node = document.importNode(s_item, true);
 					// Create an anchor link
 					s_node.querySelector("a").setAttribute("href", "#" + data[idx].name)
-					replaceTextByClass(s_node, ".w3-bar-item", data[idx].name);
+					replaceHtmlByClass(s_node, ".w3-bar-item", "<img src=\"swadge_imgs\\" + data[idx].icon+ "\" height=\"32\" width=64> " + data[idx].name);
 					// Append the node to the sidebar
 					document.getElementById("sidebar").appendChild(s_node);
 				}
